@@ -44,14 +44,80 @@ for linha in sheet_produtos.iter_rows(min_row=2, max_row=2):
     # pyautogui.click(x,y, duration=1)
     # time.sleep(5)
     
-    # preco = linha[6].value
-    # quantidade_em_estoque = linha[7].value
-    # data_de_validade = linha[8].value
-    # cor = linha[9].value
-    # tamanho = linha[10].value
-    # material = linha[11].value
-    # fabricante = linha[12].value
-    # pais_origem = linha[13].value
-    # observacoes = linha[14].value
-    # codigo_de_barras = linha[15].value
-    # localizacao_armazem = linha[16].value
+    preco = linha[6].value
+    copy_to_clipboard(preco)
+    pyautogui.click(11, 524, duration=1)
+    pyautogui.hotkey('ctrl', 'v')
+    
+    quantidade_em_estoque = linha[7].value
+    copy_to_clipboard(quantidade_em_estoque)
+    pyautogui.click(11, 524, duration=1)
+    pyautogui.hotkey('ctrl', 'v')
+    
+    data_de_validade = linha[8].value
+    copy_to_clipboard(data_de_validade)
+    pyautogui.click(11, 524, duration=1)
+    pyautogui.hotkey('ctrl', 'v')
+    
+    cor = linha[9].value
+    copy_to_clipboard(cor)
+    pyautogui.click(11, 524, duration=1)
+    pyautogui.hotkey('ctrl', 'v')
+    
+    ''' 
+    Caso tenha uma lista que tenha que selecionar algo
+    ''' 
+    tamanho = linha[10].value
+    pyautogui.click(11,524, duration=1) 
+    if tamanho == 'Pequeno':
+        pyautogui.click(11, 524, duration=1)
+    elif tamanho == 'Medio':
+        pyautogui.click(11, 524, duration=1)
+    else:
+        pyautogui.click(11, 524, duration=1)
+            
+    material = linha[11].value
+    copy_to_clipboard(material)
+    pyautogui.click(11, 524, duration=1)
+    pyautogui.hotkey('ctrl', 'v')
+    
+    ''' Caso possua um botão de próxima página '''
+    # pyautogui.click(x,y, duration=1)
+    # time.sleep(5)    
+    
+    fabricante = linha[12].value
+    copy_to_clipboard(fabricante)
+    pyautogui.click(11, 524, duration=1)
+    pyautogui.hotkey('ctrl', 'v')    
+    
+    pais_origem = linha[13].value
+    copy_to_clipboard(pais_origem)
+    pyautogui.click(11, 524, duration=1)
+    pyautogui.hotkey('ctrl', 'v')    
+    
+    observacoes = linha[14].value
+    copy_to_clipboard(observacoes)
+    pyautogui.click(11, 524, duration=1)
+    pyautogui.hotkey('ctrl', 'v')    
+    
+    codigo_de_barras = linha[15].value
+    copy_to_clipboard(codigo_de_barras)
+    pyautogui.click(11, 524, duration=1)
+    pyautogui.hotkey('ctrl', 'v')    
+    
+    localizacao_armazem = linha[16].value
+    copy_to_clipboard(localizacao_armazem)
+    pyautogui.click(11, 524, duration=1)
+    pyautogui.hotkey('ctrl', 'v')
+    
+    ''' botão concluir cadastro'''
+    # pyautogui.click(x,y, duration=1)
+    '''botão confirmar inclusão caso exista'''
+    # pyautogui.click(x,y, duration=1)
+    '''botão confirmar inclusão 2 caso exista'''
+    # pyautogui.click(x,y, duration=1)
+    '''botão para iniciar novo cadastro'''
+    # pyautogui.click(x,y, duration=1)
+    # time.sleep(5)  
+    
+    
